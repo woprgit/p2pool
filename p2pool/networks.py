@@ -124,13 +124,13 @@ nets = dict(
     ),
     icoin=math.Object(
         PARENT=networks.nets['icoin'],
-        SHARE_PERIOD=15,
-        CHAIN_LENGTH=12*60*60//15,
-        REAL_CHAIN_LENGTH=12*60*60//15,
+        SHARE_PERIOD=10,
+        CHAIN_LENGTH=12*60*60//30,
+        REAL_CHAIN_LENGTH=12*60*60//30,
         TARGET_LOOKBEHIND=20,
-        SPREAD=10,
-        IDENTIFIER='b343bd7e7d3517f5'.decode('hex'),
-        PREFIX='52d69cc7bd1cc6dd'.decode('hex'),
+        SPREAD=9,
+        IDENTIFIER='e1fc1464cb24cac8'.decode('hex'),
+        PREFIX='12af6d3399af7e72'.decode('hex'),
         P2P_PORT=8777,
         MIN_TARGET=0,
         MAX_TARGET=2**256//2**20 - 1,
@@ -140,6 +140,7 @@ nets = dict(
         ANNOUNCE_CHANNEL='#p2pool-alt',
         VERSION_CHECK=lambda v: True,
     ),
+
 )
 for net_name, net in nets.iteritems():
     net.NAME = net_name
